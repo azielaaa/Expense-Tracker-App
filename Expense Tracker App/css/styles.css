@@ -1,0 +1,229 @@
+/* General */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(120deg, #a6c1ee, #fbc2eb);
+  margin: 0;
+  padding: 0;
+  }
+  
+  header {
+    background: #1976d2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .targets {
+    text-align: center;
+  }
+  .container {
+    padding: 20px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .nav-btn {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-btn.active {
+    color: #ffffff;
+  background-color: #007bff;
+  border-radius: 20px;
+  box-shadow: 0 3px 8px rgba(0, 123, 255, 0.4);
+  }
+
+  /* Hover Effects */
+    .nav-btn:hover {
+    color: #ffffff;
+    background-color: #0056b3;
+  }
+  
+  /* Mobile-Friendly Adjustments */
+    @media (max-width: 768px) {
+    .navbar {
+      padding: 15px 0;
+    }
+  
+    .nav-btn {
+      font-size: 12px;
+    }
+  }
+  
+  .page {
+    display: none;
+  }
+  
+  .page.active {
+    display: block;
+  }
+  
+  /* Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  form label {
+    margin: 10px 0 5px;
+  }
+  
+  form input,
+  form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form button {
+    padding: 10px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background: #125b9a;
+  }
+  
+  /* Cards and Progress Bars */
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 20px;
+  }
+  
+  .card h3 {
+    margin: 0 0 10px;
+  }
+  
+  .progress {
+    background: #ddd;
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    background: #4caf50;
+    height: 100%;
+  }
+  
+  table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background: #1976d2;
+    color: white;
+  }
+  
+  /* Buttons */
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-warning {
+    background: #ff9800;
+    color: white;
+  }
+  
+  .btn-danger {
+    background: #f44336;
+    color: white;
+  }
+  
+  .btn-warning:hover {
+    background: #e68a00;
+  }
+  
+  .btn-danger:hover {
+    background: #d32f2f;
+  }
+
+
+
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  form input, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background: #1976d2;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background: #125b9a;
+  }
+  

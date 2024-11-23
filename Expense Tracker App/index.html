@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker App</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav class="navbar">
+    <button data-page="home" class="nav-btn active">Home</button>
+    <button data-page="add" class="nav-btn">Add Expense</button>
+    <button data-page="view" class="nav-btn">View Expenses</button>
+    <button data-page="summary" class="nav-btn">Summary</button>
+  </nav>
+
+  <br>
+  <!-- Pages -->
+   <br>
+   <div id="home" class="page active">
+    <header class="header">
+      <h1>Your Personal Expense Tracker</h1>
+    </header>
+    <section class="targets">
+      <h1 >Welcome to Your Personal Expense Tracker</h1>
+
+      <img src="images/expense.jpg" alt="Expense Tracker Image" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto; margin-bottom: 20px;">
+    </section>
+     
+      <!-- Table for displaying expense details with icons -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Amount (RM)</th>
+          </tr>
+        </thead>
+        <tbody id="categoryTable">
+          <!-- Table rows will be dynamically generated here -->
+        </tbody>
+      </table>
+         
+    </section>
+
+    <div class="quick-stats">
+      <p id="total-this-month">Total Your Spent : RM 0.00</p>
+      <p id="avg-daily-expense">Average Daily Expense: RM 0.00</p>
+    </div> 
+  
+    <section class="recent-transactions">
+      <h3>Recent Transactions</h3>
+      <ul id="recent-transactions">
+        <!-- Transactions will be populated dynamically -->
+      </ul>
+    </section>
+  </div>
+
+  </div>
+  
+  <div id="add" class="page">
+    <header class="header">
+      <h1>Add Expense</h1>
+    </header>
+    <form id="expenseForm">
+      <label for="date">Date</label>
+      <input type="date" id="date" required>
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" placeholder="0.00" step="0.01" required>
+      <label for="description">Description</label>
+      <input type="text" id="description" placeholder="Expense details" required>
+      <label for="category">Category</label>
+      <select id="category" required>
+        <option value="Food">Food</option>
+        <option value="Grocery">Grocery</option>
+        <option value="Bill">Bill</option>
+        <option value="Transport">Transport</option>
+      </select>
+      <button type="submit">Add Expense</button>
+    </form>
+  </div>
+
+  <div id="view" class="page">
+    <header class="header">
+      <h1>View Expenses</h1>
+    </header>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="expensesTable">
+        <!-- Data will populate dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <div id="summary" class="page">
+    <header class="header">
+      <h1>Summary</h1>
+    </header>
+    <section class="summary">
+      <div class="card">
+        <h3>Total Expenses</h3>
+        <p id="total-expenses">RM 0.00</p>
+      </div>
+      <div class="card">
+        <h3>Highest Category</h3>
+        <p id="highest-category">None</p>
+      </div>
+      <!-- Add canvas for Pie Chart -->
+      <div class="card">
+        <h3>Expense Distribution by Category</h3>
+        <canvas id="expensePieChart" width="400" height="400"></canvas>
+      </div>
+    </section>
+  </div>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
